@@ -8,8 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background: url('background.jpg') no-repeat center center fixed, linear-gradient(to bottom, #f7d7d7, #ffebee);
-            background-size: cover;
+            background: linear-gradient(to bottom, #f7d7d7, #ffebee);
             margin: 0;
             overflow: hidden;
             display: flex;
@@ -41,6 +40,11 @@
         .highlight {
             color: #ff1493;
             text-shadow: 2px 2px 4px #000;
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493, 0 0 30px #ff1493, 0 0 40px #ff1493, 0 0 50px #ff1493, 0 0 60px #ff1493, 0 0 70px #ff1493; }
+            100% { text-shadow: 0 0 20px #ff69b4, 0 0 30px #ff69b4, 0 0 40px #ff69b4, 0 0 50px #ff69b4, 0 0 60px #ff69b4, 0 0 70px #ff69b4, 0 0 80px #ff69b4; }
         }
         .highlight-special {
             color: #ff4500;
