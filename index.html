@@ -22,15 +22,16 @@
             position: relative;
             z-index: 2;
             background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
+            padding: 15px;
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            font-size: 1.5em;
+            font-size: 1.2em;
+            max-width: 90%;
         }
         .heart {
             position: absolute;
             color: #ff69b4;
-            font-size: 24px;
+            font-size: 20px;
             animation: fall 6s infinite;
         }
         @keyframes fall {
@@ -40,34 +41,36 @@
         .highlight {
             color: #ff1493;
             text-shadow: 2px 2px 4px #000;
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493, 0 0 30px #ff1493, 0 0 40px #ff1493, 0 0 50px #ff1493, 0 0 60px #ff1493, 0 0 70px #ff1493; }
+            100% { text-shadow: 0 0 20px #ff69b4, 0 0 30px #ff69b4, 0 0 40px #ff69b4, 0 0 50px #ff69b4, 0 0 60px #ff69b4, 0 0 70px #ff69b4, 0 0 80px #ff69b4; }
         }
         .highlight-special {
             color: #ff4500;
-            font-size: 1.2em;
+            font-size: 1em;
         }
         .highlight-important {
             color: #ff6347;
-            font-size: 1.2em;
+            font-size: 1em;
             font-weight: bold;
         }
         .highlight-emphasis {
             color: #ff69b4;
-            font-size: 1.2em;
+            font-size: 1em;
             font-style: italic;
         }
 
         /* Responsive Design for Mobile */
         @media (max-width: 600px) {
-            body {
-                background-size: cover;
-            }
             .container {
-                width: 90%;
-                font-size: 1.2em;
-                padding: 15px;
+                width: 95%;
+                font-size: 1em;
+                padding: 10px;
             }
             .heart {
-                font-size: 20px;
+                font-size: 18px;
             }
         }
     </style>
@@ -75,4 +78,28 @@
 <body>
     <div class="container">
         <h1 class="highlight">Happy Birthday My Jann🌺💖✨</h1>
-        <p class="highlight-special
+        <p class="highlight-special">You are the most precious gift in my life🌷🍁</p>
+        <p class="highlight-important">I wish you endless happiness, love, and success in everything you do💕🍁</p>
+        <p class="highlight-emphasis">May all your dreams come true, and may our love grow stronger with every passing moment.🌷💖</p>
+        <p class="highlight">I promise to stand by your side, love you, and make you smile always. Enjoy your day, my queen! 💖🎉🎁✨</p>
+    </div>
+
+    <audio id="background-music" autoplay loop>
+        <source src="your-background-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function createHeart() {
+            let heart = document.createElement("div");
+            heart.innerHTML = "💖";
+            heart.classList.add("heart");
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = (Math.random() * 2 + 4) + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 6000);
+        }
+        setInterval(createHeart, 200);
+    </script>
+</body>
+</html>
