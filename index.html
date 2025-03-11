@@ -3,90 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>প্রেমের প্রথম দেখা</title>
+    <title>Happy Birthday My Love</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #ffe4e1;
+            background: url('background.jpg') no-repeat center center fixed, linear-gradient(to bottom, #f7d7d7, #ffebee);
+            background-size: cover;
             margin: 0;
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            flex-direction: column;
+            color: #d50000;
         }
-        .message {
-            background-color: #ff6f61;
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            font-size: 1.5em;
-            max-width: 80%;
-            animation: fadeIn 2s ease-in-out;
+        .container {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            font-size: 1.2em;
+            max-width: 90%;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .heart {
+            position: absolute;
+            color: #ff69b4;
+            font-size: 20px;
+            animation: fall 6s infinite;
         }
-        .countdown {
-            font-size: 2em;
-            color: #333;
-            margin-top: 20px;
+        @keyframes fall {
+            0% { transform: translateY(-100vh); }
+            100% { transform: translateY(100vh); }
         }
-        .animation img {
-            width: 150px;
-            margin: 10px;
-            animation: bounce 2s infinite;
+        .highlight {
+            color: #ff1493;
+            text-shadow: 2px 2px 4px #000;
         }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-30px); }
-            60% { transform: translateY(-15px); }
+        .highlight-special {
+            color: #ff4500;
+            font-size: 1em;
+        }
+        .highlight-important {
+            color: #ff6347;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        .highlight-emphasis {
+            color: #ff69b4;
+            font-size: 1em;
+            font-style: italic;
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                font-size: 1em;
+                padding: 10px;
+            }
+            .heart {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="message">
-        প্রথম দেখাতে আমি প্রেমে পড়েছি তোমার🥰🥰 <br>
-        দুই চোখে আন্ধার দেখি, ঘুম আসে না আমার🥺🤧 <br>
-        রাতের বেলা শুয়ে শুয়ে শুধু ভাবি😒😒 <br>
-        তোমায় কীভাবে পাবো আমি😁 <br>
-        অহনা, একটু কথা কহো না😘
+    <div class="container">
+        <h1 class="highlight">Happy Birthday My Jann🌺💖✨</h1>
+        <p class="highlight-special">You are the most precious gift in my life🌷🍁</p>
+        <p class="highlight-important">I wish you endless happiness, love, and success in everything you do💕🍁</p>
+        <p class="highlight-emphasis">May all your dreams come true, and may our love grow stronger with every passing moment.🌷💖</p>
+        <p class="highlight">I promise to stand by your side, love you, and make you smile always. Enjoy your day, my queen! 💖🎉🎁✨</p>
     </div>
-    
-    <div class="countdown" id="countdown"></div>
 
-    <div class="animation">
-        <img src="https://media.giphy.com/media/l0HlQyTKN8cf4dd3W/giphy.gif" alt="Meme Animation 1">
-        <img src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt="Meme Animation 2">
-        <img src="https://media.giphy.com/media/l1J9MX8VjHSZFuHfa/giphy.gif" alt="Meme Animation 3">
-        <img src="https://media.giphy.com/media/3o7aD0S8M44mQ0JhP2/giphy.gif" alt="Meme Animation 4">
-    </div>
+    <audio id="background-music" autoplay loop>
+        <source src="your-background-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
     <script>
-        function countdownTimer() {
-            const countdownElement = document.getElementById("countdown");
-            const targetDate = new Date("June 2, 2025 00:00:00").getTime();
-            setInterval(() => {
-                const now = new Date().getTime();
-                const timeRemaining = targetDate - now;
-
-                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-                countdownElement.innerHTML = `Days: ${days} Hours: ${hours} Minutes: ${minutes} Seconds: ${seconds}`;
-
-                if (timeRemaining < 0) {
-                    clearInterval();
-                    countdownElement.innerHTML = "It's time!";
-                }
-            }, 1000);
+        function createHeart() {
+            let heart = document.createElement("div");
+            heart.innerHTML = "💖";
+            heart.classList.add("heart");
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = (Math.random() * 2 + 4) + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 6000);
         }
-
-        countdownTimer();
+        setInterval(createHeart, 200);
     </script>
 </body>
 </html>
