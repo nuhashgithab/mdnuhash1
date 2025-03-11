@@ -29,11 +29,10 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        .animation {
+        .countdown {
+            font-size: 2em;
+            color: #333;
             margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
         }
         .animation img {
             width: 150px;
@@ -56,11 +55,38 @@
         অহনা, একটু কথা কহো না😘
     </div>
     
+    <div class="countdown" id="countdown"></div>
+
     <div class="animation">
         <img src="https://media.giphy.com/media/l0HlQyTKN8cf4dd3W/giphy.gif" alt="Meme Animation 1">
         <img src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt="Meme Animation 2">
         <img src="https://media.giphy.com/media/l1J9MX8VjHSZFuHfa/giphy.gif" alt="Meme Animation 3">
         <img src="https://media.giphy.com/media/3o7aD0S8M44mQ0JhP2/giphy.gif" alt="Meme Animation 4">
     </div>
+
+    <script>
+        function countdownTimer() {
+            const countdownElement = document.getElementById("countdown");
+            const targetDate = new Date("June 2, 2025 00:00:00").getTime();
+            setInterval(() => {
+                const now = new Date().getTime();
+                const timeRemaining = targetDate - now;
+
+                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                countdownElement.innerHTML = `Days: ${days} Hours: ${hours} Minutes: ${minutes} Seconds: ${seconds}`;
+
+                if (timeRemaining < 0) {
+                    clearInterval();
+                    countdownElement.innerHTML = "It's time!";
+                }
+            }, 1000);
+        }
+
+        countdownTimer();
+    </script>
 </body>
 </html>
