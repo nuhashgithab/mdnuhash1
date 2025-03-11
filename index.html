@@ -3,98 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday My Love</title>
+    <title>সাহস থাকলে</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
             text-align: center;
-            background: url('background.jpg') no-repeat center center fixed, linear-gradient(to bottom, #f7d7d7, #ffebee);
-            background-size: cover;
             margin: 0;
-            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            color: #d50000;
+            flex-direction: column;
         }
-        .container {
-            position: relative;
-            z-index: 2;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 15px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            font-size: 1.2em;
-            max-width: 90%;
+        .prank-message {
+            background-color: #ff0000;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 24px;
+            display: none;
+            margin-top: 20px;
         }
-        .heart {
-            position: absolute;
-            color: #ff69b4;
-            font-size: 20px;
-            animation: fall 6s infinite;
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
         }
-        @keyframes fall {
-            0% { transform: translateY(-100vh); }
-            100% { transform: translateY(100vh); }
-        }
-        .highlight {
-            color: #ff1493;
-            text-shadow: 2px 2px 4px #000;
-        }
-        .highlight-special {
-            color: #ff4500;
-            font-size: 1em;
-        }
-        .highlight-important {
-            color: #ff6347;
-            font-size: 1em;
-            font-weight: bold;
-        }
-        .highlight-emphasis {
-            color: #ff69b4;
-            font-size: 1em;
-            font-style: italic;
+        .button:hover {
+            background-color: #45a049;
         }
 
-        /* Responsive Design for Mobile */
-        @media (max-width: 600px) {
-            .container {
-                width: 95%;
-                font-size: 1em;
-                padding: 10px;
+        /* Media queries for different screen sizes */
+        @media only screen and (max-width: 600px) {
+            .button {
+                font-size: 16px;
+                padding: 8px 16px;
             }
-            .heart {
+            .prank-message {
+                font-size: 20px;
+                padding: 15px;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            .button {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+            .prank-message {
                 font-size: 18px;
+                padding: 10px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="highlight">Happy Birthday My Jann🌺💖✨</h1>
-        <p class="highlight-special">You are the most precious gift in my life🌷🍁</p>
-        <p class="highlight-important">I wish you endless happiness, love, and success in everything you do💕🍁</p>
-        <p class="highlight-emphasis">May all your dreams come true, and may our love grow stronger with every passing moment.🌷💖</p>
-        <p class="highlight">I promise to stand by your side, love you, and make you smile always. Enjoy your day, my queen! 💖🎉🎁✨</p>
+    <h1>সাহস থাকলে😏</h1>
+    <button class="button" onclick="triggerPrank()">চাপ দেও😏</button>
+
+    <div class="prank-message" id="prankMessage">
+        অহনা একটু কথা কহনা🌚🤣
     </div>
 
-    <audio id="background-music" autoplay loop>
-        <source src="your-background-music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
     <script>
-        function createHeart() {
-            let heart = document.createElement("div");
-            heart.innerHTML = "💖";
-            heart.classList.add("heart");
-            heart.style.left = Math.random() * 100 + "vw";
-            heart.style.animationDuration = (Math.random() * 2 + 4) + "s";
-            document.body.appendChild(heart);
-            setTimeout(() => { heart.remove(); }, 6000);
+        function triggerPrank() {
+            var message = document.getElementById("prankMessage");
+            message.style.display = "block";
         }
-        setInterval(createHeart, 200);
     </script>
 </body>
 </html>
