@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>সাহস থাকলে</title>
+    <title>প্রেমের প্রথম দেখা</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
             text-align: center;
+            background-color: #ffe4e1;
             margin: 0;
             display: flex;
             justify-content: center;
@@ -16,66 +16,38 @@
             height: 100vh;
             flex-direction: column;
         }
-        .prank-message {
-            background-color: #ff0000;
+        .message {
+            background-color: #ff6f61;
             color: white;
             padding: 20px;
             border-radius: 10px;
-            font-size: 24px;
-            display: none;
+            font-size: 1.5em;
+            max-width: 80%;
+        }
+        .animation {
             margin-top: 20px;
         }
-        .button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-            margin-top: 20px;
+        .animation img {
+            width: 200px;
+            animation: move 3s infinite alternate;
         }
-        .button:hover {
-            background-color: #45a049;
-        }
-
-        /* Media queries for different screen sizes */
-        @media only screen and (max-width: 600px) {
-            .button {
-                font-size: 16px;
-                padding: 8px 16px;
-            }
-            .prank-message {
-                font-size: 20px;
-                padding: 15px;
-            }
-        }
-
-        @media only screen and (max-width: 400px) {
-            .button {
-                font-size: 14px;
-                padding: 6px 12px;
-            }
-            .prank-message {
-                font-size: 18px;
-                padding: 10px;
-            }
+        @keyframes move {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
         }
     </style>
 </head>
 <body>
-    <h1>সাহস থাকলে😏</h1>
-    <button class="button" onclick="triggerPrank()">চাপ দেও😏</button>
-
-    <div class="prank-message" id="prankMessage">
-        অহনা একটু কথা কহনা🌚🤣
+    <div class="message">
+        প্রথম দেখাতে আমি প্রেমে পড়েছি তোমার🥰🥰 <br>
+        দুই চোখে আন্ধার দেখি, ঘুম আসে না আমার🥺🤧 <br>
+        রাতের বেলা শুয়ে শুয়ে শুধু ভাবি😒😒 <br>
+        তোমায় কীভাবে পাবো আমি😁 <br>
+        অহনা, একটু কথা কহো না😘
     </div>
-
-    <script>
-        function triggerPrank() {
-            var message = document.getElementById("prankMessage");
-            message.style.display = "block";
-        }
-    </script>
+    
+    <div class="animation">
+        <img src="https://media.giphy.com/media/l0HlQyTKN8cf4dd3W/giphy.gif" alt="Meme Animation">
+    </div>
 </body>
 </html>
