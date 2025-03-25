@@ -1,156 +1,100 @@
-<html lang="en"><head>
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board Question</title>
- <link href="style-1.css" rel="stylesheet">
+    <title>Happy Birthday My Love</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('background.jpg') no-repeat center center fixed, linear-gradient(to bottom, #f7d7d7, #ffebee);
+            background-size: cover;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #d50000;
+        }
+        .container {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            font-size: 1.2em;
+            max-width: 90%;
+        }
+        .heart {
+            position: absolute;
+            color: #ff69b4;
+            font-size: 20px;
+            animation: fall 6s infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-100vh); }
+            100% { transform: translateY(100vh); }
+        }
+        .highlight {
+            color: #ff1493;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .highlight-special {
+            color: #ff4500;
+            font-size: 1em;
+        }
+        .highlight-important {
+            color: #ff6347;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        .highlight-emphasis {
+            color: #ff69b4;
+            font-size: 1em;
+            font-style: italic;
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                font-size: 1em;
+                padding: 10px;
+            }
+            .heart {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="rain">
-        
-        <div class="raindrop" style="top: 0; left: 10%; animation-duration: 2s;"></div>
-        <div class="raindrop" style="top: 0; left: 30%; animation-duration: 2.5s;"></div>
-        <div class="raindrop" style="top: 0; left: 50%; animation-duration: 3s;"></div>
-        <div class="raindrop" style="top: 0; left: 70%; animation-duration: 1.8s;"></div>
-        <div class="raindrop" style="top: 0; left: 90%; animation-duration: 2.2s;"></div>
-    </div>
-
-    <div class="menu">
-        <span class="menu-icon" onclick="toggleMenu()">☰</span>
-        <div class="menu-items" id="menu-items">
-            <a href="notification.php" class="btn">NOTIFICATION</a>
-            <a href="report.php" class="btn">REPORT</a>
-        </div>
-    </div>
-
     <div class="container">
-        <div class="header">
-            <img src="logo.png" alt="Logo">
-            <h1>Board Question</h1>
-        </div>
-     
-        <a href="b-1.pdf" class="btn">BANGLA FIRST PAPER</a>
-        <a href="b-2.pdf" class="btn">BANGLA SECOND PAPER</a>
-        <a href="e-1.pdf" class="btn">ENGLISH FIRST PAPER</a>
-        <a href="e-2.pdf" class="btn">ENGLISH SECOND PAPER</a>
-        <a href="bgs.pdf" class="btn">BANGLADESH AND GLOBAL STUDIES</a>
-        <a href="islam.pdf" class="btn">ISLAM</a>
-        <a href="bio.pdf" class="btn">BIOLOGY</a>
-        <a href="math.pdf" class="btn">MATH</a>
-        <a href="che.pdf" class="btn">CHEMISTRY</a>
-        <a href="phy.pdf" class="btn">PHYSICS</a>
-        <a href="hmath.pdf" class="btn">HIGHER MATH</a>
-        <a href="ict.pdf" class="btn">ICT</a>
+        <h1 class="highlight">Happy Birthday My Jann🌺💖✨</h1>
+        <p class="highlight-special">You are the most precious gift in my life🌷🍁</p>
+        <p class="highlight-important">I wish you endless happiness, love, and success in everything you do💕🍁</p>
+        <p class="highlight-emphasis">May all your dreams come true, and may our love grow stronger with every passing moment.🌷💖</p>
+        <p class="highlight">I promise to stand by your side, love you, and make you smile always. Enjoy your day, my queen! 💖🎉🎁✨</p>
     </div>
 
-    
+    <audio id="background-music" autoplay loop>
+        <source src="your-background-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
-
-</body><vmaker-container style="position: fixed; top: 0px; right: 0px; z-index: 99999999; width: 100%; height: 100%; pointer-events: none; user-select: none;"><style>
-          @font-face {
-            font-family: 'VM-Poppins';
-            src: url(chrome-extension://bjibimlhliikdlklncdgkpdmgkpieplj/static/media/Poppins-Light.ttf) format('truetype');
-            font-weight: 300;
-            font-style: normal;
-            font-display: swap;
-          }
-          @font-face {
-            font-family: 'VM-Poppins';
-            src: url(chrome-extension://bjibimlhliikdlklncdgkpdmgkpieplj/static/media/Poppins-Regular.ttf) format('truetype');
-            font-weight: 400;
-            font-style: normal;
-            font-display: swap;
-          }
-          @font-face {
-            font-family: 'VM-Poppins';
-            src: url(chrome-extension://bjibimlhliikdlklncdgkpdmgkpieplj/static/media/Poppins-Medium.ttf) format('truetype');
-            font-weight: 500;
-            font-style: normal;
-            font-display: swap;
-          }
-          @font-face {
-            font-family: 'VM-Poppins';
-            src: url(chrome-extension://bjibimlhliikdlklncdgkpdmgkpieplj/static/media/Poppins-SemiBold.ttf) format('truetype');
-            font-weight: 600;
-            font-style: normal;
-            font-display: swap;
-          }
-          @font-face {
-            font-family: 'VM-Poppins';
-            src: url(chrome-extension://bjibimlhliikdlklncdgkpdmgkpieplj/static/media/Poppins-Bold.ttf) format('truetype');
-            font-weight: 700;
-            font-style: normal;
-            font-display: swap;
-          }
-          @font-face {
-            font-family: 'VM-Allerta';
-            src: url(chrome-extension://bjibimlhliikdlklncdgkpdmgkpieplj/static/media/Allerta-Regular.ttf) format('truetype');
-            font-weight: 400;
-            font-style: normal;
-            font-display: auto;
-          }
-          @font-face {
-            font-family: 'VM-Charmonman';
-            src: url(chrome-extension://bjibimlhliikdlklncdgkpdmgkpieplj/static/media/Charmonman-Regular.ttf) format('truetype');
-            font-weight: 400;
-            font-style: normal;
-            font-display: auto;
-          }
-          @font-face {
-            font-family: 'VM-Comic Neue';
-            src: url(chrome-extension://bjibimlhliikdlklncdgkpdmgkpieplj/static/media/ComicNeue-Regular.ttf) format('truetype');
-            font-weight: 400;
-            font-style: normal;
-            font-display: auto;
-          }
-          @font-face {
-            font-family: 'VM-Open Sans';
-            src: url(chrome-extension://bjibimlhliikdlklncdgkpdmgkpieplj/static/media/OpenSans-Regular.ttf) format('truetype');
-            font-weight: 400;
-            font-style: normal;
-            font-display: auto;
-          }
-          @font-face {
-            font-family: 'VM-Poiret One';
-            src: url(chrome-extension://bjibimlhliikdlklncdgkpdmgkpieplj/static/media/PoiretOne-Regular.ttf) format('truetype');
-            font-weight: 400;
-            font-style: normal;
-            font-display: auto;
-          }
-          @font-face {
-            font-family: 'VM-Signpainter';
-            src: url(chrome-extension://bjibimlhliikdlklncdgkpdmgkpieplj/static/media/Sign-Painter-Regular.ttf) format('truetype');
-            font-weight: 400;
-            font-style: normal;
-            font-display: auto;
-          }
-          @font-face {
-            font-family: 'VM-Futura';
-            src: url(chrome-extension://bjibimlhliikdlklncdgkpdmgkpieplj/static/media/Futura-Light-font.ttf) format('truetype');
-            font-weight: 400;
-            font-style: normal;
-            font-display: auto;
-          }
-          @font-face {
-            font-family: 'VM-Barlow';
-            src: url(chrome-extension://bjibimlhliikdlklncdgkpdmgkpieplj/static/media/Barlow-Regular.ttf) format('truetype');
-            font-weight: 400;
-            font-style: normal;
-            font-display: auto;
-          }
-          @font-face {
-            font-family: 'VM-Norwester';
-            src: url(chrome-extension://bjibimlhliikdlklncdgkpdmgkpieplj/static/media/norwester.ttf) format('truetype');
-            font-weight: 400;
-            font-style: normal;
-            font-display: auto;
-          }
-          @font-face {
-            font-family: 'VM-Europa';
-            src: url(chrome-extension://bjibimlhliikdlklncdgkpdmgkpieplj/static/media/europa.ttf) format('truetype');
-            font-weight: 400;
-            font-style: normal;
-            font-display: auto;
-          }
-        </style></vmaker-container></html>
+    <script>
+        function createHeart() {
+            let heart = document.createElement("div");
+            heart.innerHTML = "💖";
+            heart.classList.add("heart");
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = (Math.random() * 2 + 4) + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 6000);
+        }
+        setInterval(createHeart, 200);
+    </script>
+</body>
+</html>
